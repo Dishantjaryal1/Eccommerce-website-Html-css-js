@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBuy - Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+    <style>
+        /* Style for each cart item */
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .cart-item img {
+            max-width: 80px;
+            max-height: 80px;
+            margin-right: 20px;
+        }
+
+        .cart-item h3 {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .cart-item p {
+            margin: 0;
+            font-size: 14px;
+            color: black;
+        }
+
+        .cart-item button {
+            padding: 5px 10px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart-item button:hover {
+            background-color: #d0523e;
+        }
+
+        /* Style for the total price section */
+        #total-price {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #empty-cart-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        #empty-cart-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            /* Center align the text */
+        }
+
+        #empty-cart-message button {
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 50px;
+        }
+
+        #empty-cart-message button:hover {
+            background-color: #d0523e;
+        }
+    </style>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+    <section id="header">
+        <a href="index.html">
+            <h2 style="color: #ff5f5f; text-decoration: none;">EasyBuy</h3>
+        </a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                <a href="#" id="close"><i class="fa far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+            <i id="bar" class=" fa fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>Shopping Cart</h2>
+        <br>
+        <h3 style="color: white;">Discover the heart of Easybuy - where convenience meets style, making every click
+            count.</h3>
+    </section>
+    <br><br><br>
+
+    <section id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+    </section>
+
+    <div id="total-price">
+
+    </div>
+
+    <div id="empty-cart-message">
+        <button onclick="window.location.href='shop.html'">Continue Shopping</button>
+    </div>
+    <br><br><br>
+    <footer class="section-p1" style="border-top:0.5px solid grey ;">
+        <div class="col">
+            <img class="logo" src="images/logo/logo3.png" style="height: 10px;width: 10px;">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Plot no. - 69 , IT Park , Chandigarh </p>
+            <p><strong>Phone:</strong>+91 9781580563
+            </p>
+            <p><strong>Hours:</strong>10:00 -18:00, Mon -Sat</p>
+
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class=" fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-pinterest"></i>
+                    <i class="fa fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play Store</p>
+            <div class="row">
+                <img src="images/pay/app.jpg" alt="">
+                <img src="images/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>© 2024, EasyBuy.com, Inc. or its affiliates </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            displayCartItems();
+        });
+
+        function displayCartItems() {
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+            var cartItemsHTML = "";
+            var totalPrice = 0;
+            cartItems.forEach(function (item) {
+                cartItemsHTML += `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}">
+                <div>
+                    <h3>${item.name}</h3>
+                    <p>${item.price}</p>
+                    <button class="remove-button" data-name="${item.name}" onclick="removeCartItem(this)">Remove</button>
+                </div>
+            </div>
+        `;
+                totalPrice += parseFloat(item.price);
+            });
+
+            document.getElementById("cart-items").innerHTML = cartItemsHTML;
+            document.getElementById("total-price").innerText = "Total Price: $" + totalPrice.toFixed(2);
+
+            // Show empty cart message if cart is empty
+            var emptyCartMessage = document.getElementById("empty-cart-message");
+            if (cartItems.length === 0) {
+                emptyCartMessage.style.display = "block";
+            } else {
+                emptyCartMessage.style.display = "none";
+            }
+        }
+
+        function removeCartItem(button) {
+            var itemName = button.getAttribute("data-name");
+            var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            var removedItemPrice = 0;
+            var updatedCartItems = cartItems.filter(function (item) {
+                if (item.name === itemName) {
+                    removedItemPrice = parseFloat(item.price);
+                    return false; // Filter out the removed item
+                }
+                return true; // Keep other items in the cart
+            });
+            localStorage.setItem("cart", JSON.stringify(updatedCartItems));
+            button.parentElement.parentElement.remove();
+            // Update total price
+            var currentTotalPrice = parseFloat(document.getElementById("total-price").innerText.replace("Total Price: $", ""));
+            var newTotalPrice = currentTotalPrice - removedItemPrice;
+            document.getElementById("total-price").innerText = "Total Price: $" + (newTotalPrice < 0 ? 0 : newTotalPrice.toFixed(2));
+
+            // Show empty cart message if cart is empty
+            var emptyCartMessage = document.getElementById("empty-cart-message");
+            if (updatedCartItems.length === 0) {
+                emptyCartMessage.style.display = "block";
+            } else {
+                emptyCartMessage.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
